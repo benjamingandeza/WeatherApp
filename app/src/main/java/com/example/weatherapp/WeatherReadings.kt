@@ -6,8 +6,15 @@ import android.os.Bundle
 
 class WeatherReadings : AppCompatActivity() {
 
+
+    var city = "Dhaka, BD"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.readings_weather)
+
+        supportActionBar?.hide()
+
+
     }
 }

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         //Navigate with delay
         mDelayHandler!!.postDelayed(mRunnable, SPLASH_DELAY)
-
+        supportActionBar?.hide()
 
     }
 
