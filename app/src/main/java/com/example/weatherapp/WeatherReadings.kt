@@ -31,6 +31,16 @@ class WeatherReadings : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-
+        loader = findViewById(R.id.loader)
+        selectCity = findViewById(R.id.selectCity)
+        cityField = findViewById(R.id.city_field)
+        updatedField =  findViewById(R.id.updated_field)
+        detailsField = findViewById(R.id.details_field)
+        currentTemperatureField = findViewById(R.id.current_temperature_field)
+        humidity_field = findViewById(R.id.humidity_field)
+        pressure_field = findViewById(R.id.pressure_field)
+        weatherIcon = findViewById(R.id.weather_icon)
+        weatherFont = Typeface.createFromAsset(assets, "fonts/weathericons-regular-webfont.ttf")
+        
     }
 }
