@@ -1,5 +1,6 @@
 package com.example.weatherapp.ui.weather.future.list
 
+import com.bumptech.glide.Glide
 import com.example.weatherapp.R
 import com.example.weatherapp.data.db.unitlocalized.future.list.MetricSimpleFutureWeatherEntry
 import com.example.weatherapp.data.db.unitlocalized.future.list.UnitSpecificSimpleFutureWeatherEntry
@@ -37,7 +38,7 @@ class FutureWeatherItem(
     }
 
     private fun ViewHolder.updateConditionImage() {
-        GlideApp.with(this.containerView)
+        Glide.with(this.containerView)
             .load("http:" + weatherEntry.conditionIconUrl)
             .into(imageView_condition_icon)
     }

@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.bumptech.glide.Glide
 
 import com.example.weatherapp.R
 import com.example.weatherapp.data.db.LocalDateConverter
 import com.example.weatherapp.internal.DateNotFoundException
-import com.example.weatherapp.internal.glide.GlideApp
+//import com.example.weatherapp.internal.glide.GlideApp
 import com.example.weatherapp.ui.base.ScopedFragment
 import kotlinx.android.synthetic.main.future_detail_weather_fragment.*
 import kotlinx.coroutines.Dispatchers
@@ -72,7 +73,7 @@ class FutureDetailWeatherFragment : ScopedFragment(), KodeinAware {
             updateVisibility(weatherEntry.avgVisibilityDistance)
             updateUv(weatherEntry.uv)
 
-            GlideApp.with(this@FutureDetailWeatherFragment)
+            Glide.with(this@FutureDetailWeatherFragment)
                 .load("http:" + weatherEntry.conditionIconUrl)
                 .into(imageView_condition_icon)
         })

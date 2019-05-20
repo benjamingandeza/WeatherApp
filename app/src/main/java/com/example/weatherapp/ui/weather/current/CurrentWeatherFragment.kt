@@ -1,19 +1,14 @@
 package com.example.weatherapp.ui.weather.current
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import com.bumptech.glide.Glide
 import com.example.weatherapp.R
-
-import com.example.weatherapp.data.network.ApixuWeatherApiService
-import com.example.weatherapp.data.network.ConnectivityInterceptorImpl
-import com.example.weatherapp.data.network.WeatherNetworkDataSourceImpl
-import com.example.weatherapp.internal.glide.GlideApp
-
 import com.example.weatherapp.ui.base.ScopedFragment
 import kotlinx.android.synthetic.main.current_weather_fragment.*
 import kotlinx.coroutines.launch
@@ -65,7 +60,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
             updateWind(it.windDirection, it.windSpeed)
             updateVisibility(it.visibilityDistance)
 
-            GlideApp.with(this@CurrentWeatherFragment)
+            Glide.with(this@CurrentWeatherFragment)
                 .load("http:${it.conditionIconUrl}")
                 .into(imageView_condition_icon)
         })
