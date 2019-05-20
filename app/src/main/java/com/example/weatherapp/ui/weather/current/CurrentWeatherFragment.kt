@@ -62,7 +62,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
 
             Glide.with(this@CurrentWeatherFragment)
                 .load("http:${it.conditionIconUrl}")
-                .into(imageView_condition_icon)
+                //.into(imageView_condition_icon)
         })
     }
 
