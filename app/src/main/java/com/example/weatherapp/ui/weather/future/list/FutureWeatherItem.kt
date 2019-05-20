@@ -40,6 +40,6 @@ class FutureWeatherItem(
     private fun ViewHolder.updateConditionImage() {
         Glide.with(this.containerView)
             .load("http:" + weatherEntry.conditionIconUrl)
-            .into(imageView_condition_icon)
+            //.into(imageView_condition_icon)
     }
 }
