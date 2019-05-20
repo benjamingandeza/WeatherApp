@@ -23,6 +23,8 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_activity)
 
+        supportActionBar?.hide();
+
         //Initialize the Handler
         mDelayHandler = Handler()
 
