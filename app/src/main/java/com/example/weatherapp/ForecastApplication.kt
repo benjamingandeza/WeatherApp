@@ -6,7 +6,7 @@ import android.preference.PreferenceManager
 import com.google.android.gms.location.LocationServices
 import com.jakewharton.threetenabp.AndroidThreeTen
 import com.example.weatherapp.data.db.ForecastDatabase
-import com.example.weatherapp.data.network.*
+import com.example.weatherapp.network.*
 import com.example.weatherapp.provider.LocationProvider
 import com.example.weatherapp.provider.LocationProviderImpl
 import com.example.weatherapp.provider.UnitProvider
