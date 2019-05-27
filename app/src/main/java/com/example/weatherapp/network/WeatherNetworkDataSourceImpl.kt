@@ -1,10 +1,10 @@
-package com.example.weatherapp.data.network
+package com.example.weatherapp.network
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.weatherapp.data.network.response.CurrentWeatherResponse
-import com.example.weatherapp.data.network.response.FutureWeatherResponse
+import com.example.weatherapp.network.response.CurrentWeatherResponse
+import com.example.weatherapp.network.response.FutureWeatherResponse
 import com.example.weatherapp.internal.NoConnectivityException
 
 const val FORECAST_DAYS_COUNT = 7

@@ -2,8 +2,8 @@ package com.example.weatherapp.ui.weather.future.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.weatherapp.data.provider.UnitProvider
-import com.example.weatherapp.data.repository.ForecastRepository
+import com.example.weatherapp.provider.UnitProvider
+import com.example.weatherapp.repository.ForecastRepository
 import org.threeten.bp.LocalDate
 
 

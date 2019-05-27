@@ -1,9 +1,9 @@
-package com.example.weatherapp.data.network
+package com.example.weatherapp.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.example.weatherapp.data.network.response.CurrentWeatherResponse
-import com.example.weatherapp.data.network.response.FutureWeatherResponse
-import com.example.weatherapp.data.network.ConnectivityInterceptor
+import com.example.weatherapp.network.response.CurrentWeatherResponse
+import com.example.weatherapp.network.response.FutureWeatherResponse
+import com.example.weatherapp.network.ConnectivityInterceptor
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

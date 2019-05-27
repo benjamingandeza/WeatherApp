@@ -1,8 +1,8 @@
-package com.example.weatherapp.data.network
+package com.example.weatherapp.network
 
 import androidx.lifecycle.LiveData
-import com.example.weatherapp.data.network.response.CurrentWeatherResponse
-import com.example.weatherapp.data.network.response.FutureWeatherResponse
+import com.example.weatherapp.network.response.CurrentWeatherResponse
+import com.example.weatherapp.network.response.FutureWeatherResponse
 
 
 interface WeatherNetworkDataSource {

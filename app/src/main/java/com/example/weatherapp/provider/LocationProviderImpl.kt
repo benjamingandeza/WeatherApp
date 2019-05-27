@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.provider
+package com.example.weatherapp.provider
 
 import android.Manifest
 import android.annotation.SuppressLint

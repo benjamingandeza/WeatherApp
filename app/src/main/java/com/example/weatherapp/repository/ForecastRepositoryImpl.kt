@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.repository
+package com.example.weatherapp.repository
 
 import androidx.lifecycle.LiveData
 import com.example.weatherapp.data.db.CurrentWeatherDao
@@ -8,11 +8,11 @@ import com.example.weatherapp.data.db.entity.WeatherLocation
 import com.example.weatherapp.data.db.unitlocalized.current.UnitSpecificCurrentWeatherEntry
 import com.example.weatherapp.data.db.unitlocalized.future.detail.UnitSpecificDetailFutureWeatherEntry
 import com.example.weatherapp.data.db.unitlocalized.future.list.UnitSpecificSimpleFutureWeatherEntry
-import com.example.weatherapp.data.network.FORECAST_DAYS_COUNT
-import com.example.weatherapp.data.network.WeatherNetworkDataSource
-import com.example.weatherapp.data.network.response.CurrentWeatherResponse
-import com.example.weatherapp.data.network.response.FutureWeatherResponse
-import com.example.weatherapp.data.provider.LocationProvider
+import com.example.weatherapp.network.FORECAST_DAYS_COUNT
+import com.example.weatherapp.network.WeatherNetworkDataSource
+import com.example.weatherapp.network.response.CurrentWeatherResponse
+import com.example.weatherapp.network.response.FutureWeatherResponse
+import com.example.weatherapp.provider.LocationProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

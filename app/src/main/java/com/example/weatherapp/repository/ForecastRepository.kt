@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.repository
+package com.example.weatherapp.repository
 
 import androidx.lifecycle.LiveData
 import com.example.weatherapp.data.db.entity.WeatherLocation

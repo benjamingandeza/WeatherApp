@@ -1,8 +1,8 @@
-package com.example.weatherapp.data.network
+package com.example.weatherapp.network
 
 import android.content.Context
 import android.net.ConnectivityManager
-import com.example.weatherapp.data.network.ConnectivityInterceptor
+import com.example.weatherapp.network.ConnectivityInterceptor
 import com.example.weatherapp.internal.NoConnectivityException
 import okhttp3.Interceptor
 import okhttp3.Response

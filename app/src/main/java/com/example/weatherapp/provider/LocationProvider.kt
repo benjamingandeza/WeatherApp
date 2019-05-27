@@ -1,4 +1,4 @@
-package com.example.weatherapp.data.provider
+package com.example.weatherapp.provider
 
 import com.example.weatherapp.data.db.entity.WeatherLocation
 
