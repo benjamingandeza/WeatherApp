@@ -64,6 +64,7 @@ class FutureDetailWeatherFragment : ScopedFragment(), KodeinAware {
         futureWeather.observe(this@FutureDetailWeatherFragment, Observer { weatherEntry ->
             if (weatherEntry == null) return@Observer
 
+            putIcon()
             updateDate(weatherEntry.date)
             updateTemperatures(weatherEntry.avgTemperature,
                 weatherEntry.minTemperature, weatherEntry.maxTemperature)
@@ -100,6 +101,13 @@ class FutureDetailWeatherFragment : ScopedFragment(), KodeinAware {
 
     private fun updateCondition(condition: String) {
         textView_condition.text = condition
+    }
+
+    private fun putIcon(){
+
+        (activity as? AppCompatActivity)?.supportActionBar?.setIcon(R.drawable.ic_city_location)
+
+
     }
 
     private fun updatePrecipitation(precipitationVolume: Double) {

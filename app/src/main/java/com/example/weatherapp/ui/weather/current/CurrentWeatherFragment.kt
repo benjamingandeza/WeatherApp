@@ -28,6 +28,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.current_weather_fragment, container, false)
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -47,6 +48,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
         weatherLocation.observe(this@CurrentWeatherFragment, Observer { location ->
             if (location == null) return@Observer
             updateLocation(location.name)
+
         })
 
         currentWeather.observe(this@CurrentWeatherFragment, Observer {
@@ -54,6 +56,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
 
             //group_loading.visibility = View.GONE
             updateDateToToday()
+            putIcon()
             updateTemperatures(it.temperature, it.feelsLikeTemperature)
             updateCondition(it.conditionText)
             updatePrecipitation(it.precipitationVolume)
@@ -72,10 +75,16 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
 
     private fun updateLocation(location: String) {
         (activity as? AppCompatActivity)?.supportActionBar?.title = location
+
     }
 
     private fun updateDateToToday() {
         (activity as? AppCompatActivity)?.supportActionBar?.subtitle = "Today"
+    }
+
+    private fun putIcon(){
+
+        (activity as? AppCompatActivity)?.supportActionBar?.setIcon(R.drawable.ic_city_location)
     }
 
     private fun updateTemperatures(temperature: Double, feelsLike: Double) {

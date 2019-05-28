@@ -15,7 +15,6 @@ import retrofit2.http.Query
 
 const val API_KEY = "22b571c7b0874b71b4d80927192005"
 
-//http://api.apixu.com/v1/current.json?key=89e8bd89085b41b7a4b142029180210&q=London&lang=en
 
 interface ApixuWeatherApiService {
 
@@ -26,7 +25,6 @@ interface ApixuWeatherApiService {
     ): Deferred<CurrentWeatherResponse>
 
 
-    // https://api.apixu.com/v1/forecast.json?key=89e8bd89085b41b7a4b142029180210&q=Los%20Angeles&days=1
     @GET("forecast.json")
     fun getFutureWeather(
         @Query("q") location: String,

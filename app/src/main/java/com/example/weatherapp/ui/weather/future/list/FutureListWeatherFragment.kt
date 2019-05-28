@@ -58,7 +58,7 @@ class FutureListWeatherFragment : ScopedFragment(), KodeinAware {
             if (weatherEntries == null) return@Observer
 
             group_loading.visibility = View.GONE
-
+            putIcon()
             updateDateToNextWeek()
             initRecyclerView(weatherEntries.toFutureWeatherItems())
         })
@@ -66,6 +66,11 @@ class FutureListWeatherFragment : ScopedFragment(), KodeinAware {
 
     private fun updateLocation(location: String) {
         (activity as? AppCompatActivity)?.supportActionBar?.title = location
+    }
+
+    private fun putIcon(){
+        (activity as? AppCompatActivity)?.supportActionBar?.setIcon(R.drawable.ic_city_location)
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
     }
 
     private fun updateDateToNextWeek() {

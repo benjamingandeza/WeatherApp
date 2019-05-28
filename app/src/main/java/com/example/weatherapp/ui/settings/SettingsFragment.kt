@@ -16,6 +16,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
         super.onActivityCreated(savedInstanceState)
         (activity as? AppCompatActivity)?.supportActionBar?.title = "Settings"
         (activity as? AppCompatActivity)?.supportActionBar?.subtitle = null
+        (activity as? AppCompatActivity)?.supportActionBar?.setIcon(R.drawable.ic_settings_white_50dp)
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
+
     }
 
 }
