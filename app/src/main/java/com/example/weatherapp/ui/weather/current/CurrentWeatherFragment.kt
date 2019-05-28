@@ -61,8 +61,8 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
             updateVisibility(it.visibilityDistance)
 
             Glide.with(this@CurrentWeatherFragment)
-                .load("http:${it.conditionIconUrl}")
-                //.into(imageView_condition_icon)
+                .load("https://${it.conditionIconUrl}")
+                .into(imageView_condition_icon)
         })
     }
 
