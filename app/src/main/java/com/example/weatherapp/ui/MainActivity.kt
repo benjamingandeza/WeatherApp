@@ -3,7 +3,9 @@ package com.example.weatherapp.ui
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -53,7 +55,32 @@ class MainActivity : AppCompatActivity(), KodeinAware {
         }
         else
             requestLocationPermission()
+
     }
+
+    override fun onBackPressed() {
+
+       val builder = AlertDialog.Builder(this@MainActivity)
+
+        builder.setTitle("Exit Application")
+        builder.setIcon(R.drawable.ic_warning)
+
+        builder.setMessage("Are you sure you want to exit application?")
+
+        builder.setPositiveButton("YES"){dialog, which ->
+            System.exit(0)
+
+        }
+
+        builder.setNeutralButton("Cancel"){dialog, which ->
+            Log.i("cancel","Cancelled exit method")
+        }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+
+
+    }
+
 
     private fun bindLocationManager() {
         LifecycleBoundLocationManager(
