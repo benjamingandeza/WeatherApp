@@ -2,8 +2,10 @@ package com.example.weatherapp.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.ContextThemeWrapper
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
     override fun onBackPressed() {
 
-       val builder = AlertDialog.Builder(this@MainActivity)
+       val builder = AlertDialog.Builder(ContextThemeWrapper(this, R.style.AlertDialogCustom))
 
         builder.setTitle("Exit Application")
         builder.setIcon(R.drawable.ic_warning)
@@ -72,12 +74,14 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
         }
 
-        builder.setNeutralButton("Cancel"){dialog, which ->
+        builder.setNegativeButton("Cancel"){dialog, which ->
             Log.i("cancel","Cancelled exit method")
+
         }
         val dialog: AlertDialog = builder.create()
         dialog.show()
-
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE)
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE)
 
     }
 
