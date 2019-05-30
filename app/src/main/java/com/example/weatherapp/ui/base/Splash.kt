@@ -1,9 +1,10 @@
-package com.example.weatherapp
+package com.example.weatherapp.ui.base
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.weatherapp.R
 import com.example.weatherapp.ui.MainActivity
 
 class Splash : AppCompatActivity() {
@@ -23,12 +24,8 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_activity)
 
-        supportActionBar?.hide();
-
-        //Initialize the Handler
+        supportActionBar?.hide()
         mDelayHandler = Handler()
-
-        //Navigate with delay
         mDelayHandler!!.postDelayed(mRunnable, SPLASH_DELAY)
 
     }
